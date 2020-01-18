@@ -1,0 +1,73 @@
+// A shader to pass along refraction and reflection.
+// From www.learnopengl.com
+#version 300 es
+#extension GL_EXT_separate_shader_objects : enable
+
+precision highp float;
+precision highp int;
+
+struct Lights {
+    vec3 lightPos;
+    vec4 lightColor;
+};
+
+struct TexIO {
+    vec3 Normal;
+    vec3 Position;
+    vec2 TexCoord;
+    float index1;
+};
+
+in TexIO texData;
+out vec4 color;
+
+const int numlights = 8;
+
+uniform vec3 viewPos;
+//uniform samplerCube skybox;
+uniform Lights lighting[numlights];
+uniform sampler2D cratetex;
+uniform highp sampler2DArray tex;
+
+float shininess = 50.0;
+vec3 normal;
+vec4 rescolor = vec4(0.0f, 0.0f, 0.0f, 0.0f);
+
+vec4 CalcDirLight(vec3 light, vec3 normal, vec3 lightDir, vec3 viewDir);
+vec4 texVal;
+vec3 texVec;
+void main()
+{
+    texVec = vec3(texData.TexCoord.x, texData.TexCoord.y, texData.index1);
+    normal = normalize(texData.Normal);
+    texVal = mix(texture(cratetex, texData.TexCoord), texture(tex, texVec), 0.3);
+    //texVal = texture(tex, texVec);
+    rescolor = vec4(0.0f, 0.0f, 0.0f, 0.0f);
+    for (int x = 0; x < numlights; x++)
+    {
+        vec3 I = -normalize(lighting[x].lightPos - texData.Position);
+        vec3 viewDir = normalize(viewPos - texData.Position);
+        vec3 R = reflect(I, normal);
+        //vec3 R = vec3(-5.0, 10.0, 10.0);
+        //skyLight = vec3(texture(skybox, R));
+        vec4 result = CalcDirLight(lighting[x].lightColor.xyz, normal, R, viewDir);
+        rescolor += result;
+    }
+    color = rescolor;
+}  
+
+vec4 CalcDirLight(vec3 light, vec3 normal, vec3 lightDir, vec3 viewDir)
+{
+    // Diffuse shading
+    float diff = max(dot(normal, lightDir), 0.0);
+    // Specular shading
+    vec3 reflectDir = reflect(-lightDir, normal);
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), shininess);
+    // Combine results
+    vec3 ambient  = 0.2 * texVal.xyz;
+    vec3 diffuse  = light  * diff * texVal.xyz;
+    vec3 specular = light * spec * texVal.xyz;
+    return vec4((ambient + diffuse + specular), 1.0) * 0.7;
+    //return vec4((ambient + diffuse), 1.0) * 0.8;
+    //return vec4(diff, 0.0, 0.0, 1.0);
+} 

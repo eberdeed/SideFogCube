@@ -1,0 +1,161 @@
+\hypertarget{classShader}{}\section{Shader Class Reference}
+\label{classShader}\index{Shader@{Shader}}
+
+
+{\ttfamily \#include $<$shader.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classShader_af73d7e0d84dcdcfe0beb871ac796928c}{init\+Shader} (string vertex\+Path, string fragment\+Path, string output\+File)
+\begin{DoxyCompactList}\small\item\em init\+Shader Read and build the shader from two files. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classShader_a5a9535209cf2d04bbeff96f8a945f227}{create\+Shader} (unsigned int type, string fpath)
+\begin{DoxyCompactList}\small\item\em create\+Shader Create the vertex or fragment shader from a file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classShader_a6b11327cff651ffdb22988b6917b1650}\label{classShader_a6b11327cff651ffdb22988b6917b1650}} 
+void \hyperlink{classShader_a6b11327cff651ffdb22988b6917b1650}{Use} ()
+\begin{DoxyCompactList}\small\item\em Use Use the program. \end{DoxyCompactList}\item 
+bool \hyperlink{classShader_a0793a05d73a73529c963c2d59b166440}{create\+Binary} ()
+\begin{DoxyCompactList}\small\item\em create\+Binary Create the shader program binary and save it to a file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classShader_ae60698f3e6542b71436609cf300e2ec3}\label{classShader_ae60698f3e6542b71436609cf300e2ec3}} 
+void \hyperlink{classShader_ae60698f3e6542b71436609cf300e2ec3}{set\+Bool} (const string name, bool value) const
+\begin{DoxyCompactList}\small\item\em set\+Bool A Utility uniform function that sets a value in the shader(s). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classShader_a21207694374340b8ee875fc98f328c02}\label{classShader_a21207694374340b8ee875fc98f328c02}} 
+void \hyperlink{classShader_a21207694374340b8ee875fc98f328c02}{set\+Int} (const string name, int value) const
+\begin{DoxyCompactList}\small\item\em set\+Int A Utility uniform function that sets a value in the shader(s). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classShader_ac9c9c3fb7cd36476259014d8d2cfb1b3}\label{classShader_ac9c9c3fb7cd36476259014d8d2cfb1b3}} 
+void \hyperlink{classShader_ac9c9c3fb7cd36476259014d8d2cfb1b3}{set\+Float} (const string name, float value) const
+\begin{DoxyCompactList}\small\item\em set\+Float A Utility uniform function that sets a value in the shader(s). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classShader_ac6e5445f707c5683b93a80e4400c2ddf}\label{classShader_ac6e5445f707c5683b93a80e4400c2ddf}} 
+void \hyperlink{classShader_ac6e5445f707c5683b93a80e4400c2ddf}{set\+Vec2} (const std\+::string name, vec2 value) const
+\begin{DoxyCompactList}\small\item\em set\+Vec2 A Utility uniform function that sets a value in the shader(s). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classShader_a64ec79e7982e247bbc71597ea029f7cf}\label{classShader_a64ec79e7982e247bbc71597ea029f7cf}} 
+void \hyperlink{classShader_a64ec79e7982e247bbc71597ea029f7cf}{set\+Vec3} (const std\+::string name, vec3 value) const
+\begin{DoxyCompactList}\small\item\em set\+Vec3 A Utility uniform function that sets a value in the shader(s). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classShader_abcee967cfebf28f0c6f856a21352059e}\label{classShader_abcee967cfebf28f0c6f856a21352059e}} 
+void \hyperlink{classShader_abcee967cfebf28f0c6f856a21352059e}{set\+Vec4} (const string name, vec4 value) const
+\begin{DoxyCompactList}\small\item\em set\+Vec4 A Utility uniform function that sets a value in the shader(s). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classShader_a8ec1174e2bae33622c1ebe1e8efab911}\label{classShader_a8ec1174e2bae33622c1ebe1e8efab911}} 
+void \hyperlink{classShader_a8ec1174e2bae33622c1ebe1e8efab911}{set\+Mat4} (const string name, mat4 value) const
+\begin{DoxyCompactList}\small\item\em set\+Mat4 A Utility uniform function that sets a value in the shader(s). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classShader_a51b23253846bc84dcc2ef06612679012}\label{classShader_a51b23253846bc84dcc2ef06612679012}} 
+G\+Luint {\bfseries Program}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classShader_aa92ac3efc16e935cc187bb1fa2de3c1d}\label{classShader_aa92ac3efc16e935cc187bb1fa2de3c1d}} 
+int \hyperlink{classShader_aa92ac3efc16e935cc187bb1fa2de3c1d}{success} = 0
+\begin{DoxyCompactList}\small\item\em Class global variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classShader_a925980c85cb0feec42bcb6ccbca462fc}\label{classShader_a925980c85cb0feec42bcb6ccbca462fc}} 
+int {\bfseries info\+Length} = 0
+\item 
+\mbox{\Hypertarget{classShader_a0563120d6a835ba8b499c62d40aa6902}\label{classShader_a0563120d6a835ba8b499c62d40aa6902}} 
+G\+Luint {\bfseries vertex}
+\item 
+\mbox{\Hypertarget{classShader_a19fa1778514d32b2f756add50277697e}\label{classShader_a19fa1778514d32b2f756add50277697e}} 
+G\+Luint {\bfseries fragment}
+\item 
+\mbox{\Hypertarget{classShader_a97110ef268966a801e052ef65c1fffee}\label{classShader_a97110ef268966a801e052ef65c1fffee}} 
+int {\bfseries prog\+Length} = 0
+\item 
+\mbox{\Hypertarget{classShader_a2938fe62f4ab9a08c0aa5bec961eb6f8}\label{classShader_a2938fe62f4ab9a08c0aa5bec961eb6f8}} 
+int {\bfseries prog\+Len\+Ret} = 0
+\item 
+\mbox{\Hypertarget{classShader_a31ee1c56c35582104dbf901e47351b2d}\label{classShader_a31ee1c56c35582104dbf901e47351b2d}} 
+G\+Lenum $\ast$ {\bfseries val\+Formats}
+\item 
+\mbox{\Hypertarget{classShader_a5e9246c5b3e23cb488511799b834372f}\label{classShader_a5e9246c5b3e23cb488511799b834372f}} 
+G\+Lenum {\bfseries format}
+\item 
+\mbox{\Hypertarget{classShader_af712293fbaca66f0b0de142e82f16420}\label{classShader_af712293fbaca66f0b0de142e82f16420}} 
+int {\bfseries response} = 0
+\item 
+\mbox{\Hypertarget{classShader_a461d70dc51197c6709cacc07a14babb7}\label{classShader_a461d70dc51197c6709cacc07a14babb7}} 
+unsigned char $\ast$ {\bfseries binary}
+\item 
+\mbox{\Hypertarget{classShader_acafe54560442b48deef8614570e1f946}\label{classShader_acafe54560442b48deef8614570e1f946}} 
+string {\bfseries output\+File}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class to encapsulate the uploading, compiling, linking and use of a shader. Note this class requires a seperate \char`\"{}shaders\char`\"{} directory to store the shaders in. Further, this class will create shader binary and reload it. The binary will be recreated it if it ceases to validate as a shader program. 
+
+Definition at line 26 of file shader.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classShader_a0793a05d73a73529c963c2d59b166440}\label{classShader_a0793a05d73a73529c963c2d59b166440}} 
+\index{Shader@{Shader}!create\+Binary@{create\+Binary}}
+\index{create\+Binary@{create\+Binary}!Shader@{Shader}}
+\subsubsection{\texorpdfstring{create\+Binary()}{createBinary()}}
+{\footnotesize\ttfamily bool Shader\+::create\+Binary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+create\+Binary Create the shader program binary and save it to a file. 
+
+Create the shader program binary for later use.
+
+standard C I/O file reading loop 
+
+Definition at line 207 of file shader.\+cpp.
+
+\mbox{\Hypertarget{classShader_a5a9535209cf2d04bbeff96f8a945f227}\label{classShader_a5a9535209cf2d04bbeff96f8a945f227}} 
+\index{Shader@{Shader}!create\+Shader@{create\+Shader}}
+\index{create\+Shader@{create\+Shader}!Shader@{Shader}}
+\subsubsection{\texorpdfstring{create\+Shader()}{createShader()}}
+{\footnotesize\ttfamily unsigned int Shader\+::create\+Shader (\begin{DoxyParamCaption}\item[{unsigned int}]{type,  }\item[{string}]{fpath }\end{DoxyParamCaption})}
+
+
+
+create\+Shader Create the vertex or fragment shader from a file. 
+
+Where the individual shaders are compiled.
+
+Read file\textquotesingle{}s buffer contents into streams
+
+standard C I/O file reading loop
+
+Vertex \hyperlink{classShader}{Shader}
+
+Print compile errors if any 
+
+Definition at line 145 of file shader.\+cpp.
+
+\mbox{\Hypertarget{classShader_af73d7e0d84dcdcfe0beb871ac796928c}\label{classShader_af73d7e0d84dcdcfe0beb871ac796928c}} 
+\index{Shader@{Shader}!init\+Shader@{init\+Shader}}
+\index{init\+Shader@{init\+Shader}!Shader@{Shader}}
+\subsubsection{\texorpdfstring{init\+Shader()}{initShader()}}
+{\footnotesize\ttfamily void Shader\+::init\+Shader (\begin{DoxyParamCaption}\item[{string}]{vertex\+Path,  }\item[{string}]{fragment\+Path,  }\item[{string}]{output\+File }\end{DoxyParamCaption})}
+
+
+
+init\+Shader Read and build the shader from two files. 
+
+Where the program is created.
+
+Before a binary can be loaded a binary format has to be selected and before a binary format can be found an amount of the number of binary formats has to be obtained.
+
+standard C I/O file reading loop
+
+This is the spot where the format is used to turn the loaded binary into an Open\+GL shader program.
+
+If the shader program does not load, the \hyperlink{classShader}{Shader} class will go through the usual process of obtaining the shader code, compling it, linking it and using it as a shader program.
+
+Print linking errors if any
+
+Delete the shaders as they\textquotesingle{}re linked into our program now and no longer necessery 
+
+Definition at line 25 of file shader.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+shader.\+h\item 
+shader.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,164 @@
+\hypertarget{classSideFogCube}{}\section{Side\+Fog\+Cube Class Reference}
+\label{classSideFogCube}\index{Side\+Fog\+Cube@{Side\+Fog\+Cube}}
+
+
+{\ttfamily \#include $<$sidefogcube.\+h$>$}
+
+
+
+Inheritance diagram for Side\+Fog\+Cube\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{d4/dfd/classSideFogCube__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Side\+Fog\+Cube\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{da/da8/classSideFogCube__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSideFogCube_af3f3ad8ae933d9275fb7b761c55d31fd}{Side\+Fog\+Cube} ()
+\item 
+virtual int \hyperlink{classSideFogCube_a54448225b0c51ba310629e606d4f512d}{main} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em main The Clan\+Lib internal main. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The class that creates a cloud of randomly spinning cubes in a fog or not. 
+
+Definition at line 20 of file sidefogcube.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSideFogCube_af3f3ad8ae933d9275fb7b761c55d31fd}\label{classSideFogCube_af3f3ad8ae933d9275fb7b761c55d31fd}} 
+\index{Side\+Fog\+Cube@{Side\+Fog\+Cube}!Side\+Fog\+Cube@{Side\+Fog\+Cube}}
+\index{Side\+Fog\+Cube@{Side\+Fog\+Cube}!Side\+Fog\+Cube@{Side\+Fog\+Cube}}
+\subsubsection{\texorpdfstring{Side\+Fog\+Cube()}{SideFogCube()}}
+{\footnotesize\ttfamily Side\+Fog\+Cube\+::\+Side\+Fog\+Cube (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The cloud of cubes goes from -\/25 to 25 on all three axis. There is a light at each corner.
+
+Definition at line 10 of file sidefogcube.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSideFogCube_a54448225b0c51ba310629e606d4f512d}\label{classSideFogCube_a54448225b0c51ba310629e606d4f512d}} 
+\index{Side\+Fog\+Cube@{Side\+Fog\+Cube}!main@{main}}
+\index{main@{main}!Side\+Fog\+Cube@{Side\+Fog\+Cube}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int Side\+Fog\+Cube\+::main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+main The Clan\+Lib internal main. 
+
+Clan\+Lib uses a class internal main, nice for c++.
+
+Create a console window for text-\/output if not available
+
+Initialize Clan\+Lib base components
+
+Initialize the Clan\+Lib display component
+
+Initilize the Open\+GL drivers
+
+Removing the true on this function will stop the program from using fullscreen.
+
+Connect the Window close event
+
+Connect the various signals to their slots.
+
+Set this to true so G\+L\+EW knows to use a modern approach to retrieving function pointers and extensions
+
+gl\+Front\+Face(\+G\+L\+\_\+\+C\+C\+W);
+
+Define and compile the shaders.
+
+Set the background image.
+
+Set the foreground images.
+
+Define the locations and image indices.
+
+Generate the object.
+
+
+\begin{DoxyEnumerate}
+\item Bind the Vertex Array Object.
+\item copy our vertices arrays into the buffers for Open\+GL to use. Position attribute
+\end{DoxyEnumerate}
+
+Normal attribute.
+
+Texture attribute.
+
+Uniform buffer to feed the uniform.
+
+Variables for the event loop.
+
+Initialize the random number generator.
+
+Grab a time to count degrees by the clock.
+
+\subsubsection*{render loop }
+
+Grab a time to adjust camera speed.
+
+Reset the model.
+
+Find the camera.
+
+render
+
+------ Count degrees rotated.
+
+Use the shaders.
+
+We have a fog toggle on the space key.
+
+Start feeding in the buffer data.
+
+Initialize the lighting system.
+
+Sort the locations based on the current camera position.
+
+Set the crate background.
+
+Set the foreground images.
+
+Pass in the necessary uniforms.
+
+Fog is variable based on the right arrow and left arrow keys.
+
+Pass the image indices and cube distances.
+
+Use the instancing feature to create multiple copies of each set of images.
+
+Call for each image one side at a time.
+
+Uncomment this to get a listing of the uniforms recognized by the shaders. \hyperlink{classUniformPrinter}{Uniform\+Printer} printer2(shader-\/$>$Program);
+
+Swap buffers 
+
+
+
+Definition at line 87 of file sidefogcube.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sidefogcube.\+h\item 
+sidefogcube.\+cpp\end{DoxyCompactItemize}

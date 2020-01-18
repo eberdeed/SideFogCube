@@ -1,0 +1,5 @@
+    
+    Change Log for sidefogcube.
+
+    Program created and documentation provided.
+    01/17/2020 ECE

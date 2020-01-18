@@ -1,0 +1,37 @@
+[Buildset]
+BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x16\x00s\x00i\x00d\x00e\x00f\x00o\x00g\x00c\x00u\x00b\x00e)
+
+[CMake]
+Build Directory Count=1
+Current Build Directory Index-Host System=0
+
+[CMake][CMake Build Directory 0]
+Build Directory Path=/home/eberdeed/opengles/eberdeed/sidefogcube/build
+Build Type=
+CMake Binary=/usr/local/bin/cmake
+CMake Executable=/usr/local/bin/cmake
+Environment Profile=
+Extra Arguments=
+Install Directory=/usr/local
+Runtime=Host System
+
+[Launch]
+Launch Configurations=Launch Configuration 0
+
+[Launch][Launch Configuration 0]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=New Compiled Binary Launcher
+Type=Native Application
+
+[Launch][Launch Configuration 0][Data]
+Arguments=
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+EnvironmentGroup=
+Executable=file:///home/eberdeed/opengles/eberdeed/sidefogcube
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=sidefogcube,sidefogcube
+Use External Terminal=false
+Working Directory=
+isExecutable=false

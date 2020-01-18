@@ -1,0 +1,152 @@
+\hypertarget{classCreateImage}{}\section{Create\+Image Class Reference}
+\label{classCreateImage}\index{Create\+Image@{Create\+Image}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCreateImage_a0fb8715c56dc5ff120aa355ca66496f6}{set\+Image} (string imagefile)
+\begin{DoxyCompactList}\small\item\em set\+Image Load image and convert it. \end{DoxyCompactList}\item 
+G\+Lsizei \hyperlink{classCreateImage_ac0edbffce968346bd4c43564beb27c26}{get\+Width} ()
+\begin{DoxyCompactList}\small\item\em get\+Width Accessor function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreateImage_abeb628a5f2fc67aeb1c39c1d0a445142}\label{classCreateImage_abeb628a5f2fc67aeb1c39c1d0a445142}} 
+G\+Lsizei \hyperlink{classCreateImage_abeb628a5f2fc67aeb1c39c1d0a445142}{get\+Height} ()
+\begin{DoxyCompactList}\small\item\em get\+Height Accessor function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreateImage_a85dfaf7a1b8bf86c12877b117f8989b8}\label{classCreateImage_a85dfaf7a1b8bf86c12877b117f8989b8}} 
+G\+Lvoid $\ast$ \hyperlink{classCreateImage_a85dfaf7a1b8bf86c12877b117f8989b8}{get\+Data} ()
+\begin{DoxyCompactList}\small\item\em get\+Data Accessor function. \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{classCreateImage_a529a1307050df8719e180e006141b762}{texture\+Object} ()
+\begin{DoxyCompactList}\small\item\em texture\+Object Return an Open\+GL buffer object. \end{DoxyCompactList}\item 
+void \hyperlink{classCreateImage_acbff5ee9dfb7e64bcf850cce6f3ee13d}{create\+Sky\+Box\+Tex} (G\+Luint \&texture\+ID, string filenames\mbox{[}6\mbox{]})
+\begin{DoxyCompactList}\small\item\em create\+Sky\+Box\+Tex Create a sky box using six pictures for the inside of the box. \end{DoxyCompactList}\item 
+void \hyperlink{classCreateImage_a51bb6307d7b106aab55292813ef8b694}{create2\+D\+Tex\+Array} (G\+Luint \&texture\+ID, string filenames\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em create2\+D\+Tex\+Array Create a texture array, you can adjust this to make up to a maximum picture array size of 256. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCreateImage_aef75789ae909e699137dd13bfb6c8ae3}\label{classCreateImage_aef75789ae909e699137dd13bfb6c8ae3}} 
+fip\+Image \hyperlink{classCreateImage_aef75789ae909e699137dd13bfb6c8ae3}{txt\+Image}
+\begin{DoxyCompactList}\small\item\em Class global variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreateImage_a75be3bf73393293b28bf3a4f67c2acfb}\label{classCreateImage_a75be3bf73393293b28bf3a4f67c2acfb}} 
+B\+Y\+TE $\ast$ {\bfseries pic\+Line}
+\item 
+\mbox{\Hypertarget{classCreateImage_a820c4459b175116be89caf19a46926ae}\label{classCreateImage_a820c4459b175116be89caf19a46926ae}} 
+G\+Lsizei {\bfseries width}
+\item 
+\mbox{\Hypertarget{classCreateImage_a2932fbd279fc1407a74fbfa37d2857df}\label{classCreateImage_a2932fbd279fc1407a74fbfa37d2857df}} 
+G\+Lsizei {\bfseries height}
+\item 
+\mbox{\Hypertarget{classCreateImage_a409d26c7a384b82b0638c25a2b6b2194}\label{classCreateImage_a409d26c7a384b82b0638c25a2b6b2194}} 
+int {\bfseries size} = 0
+\item 
+\mbox{\Hypertarget{classCreateImage_a8ac66363719dbbba5386527ec970c2fe}\label{classCreateImage_a8ac66363719dbbba5386527ec970c2fe}} 
+unsigned char $\ast$ {\bfseries pixels} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{classCreateImage_a52d1bf19d5ca8be287e93b811fc29d2f}\label{classCreateImage_a52d1bf19d5ca8be287e93b811fc29d2f}} 
+int {\bfseries count}
+\item 
+\mbox{\Hypertarget{classCreateImage_aaeeb240ef49097e5968c02996dcd7b01}\label{classCreateImage_aaeeb240ef49097e5968c02996dcd7b01}} 
+int {\bfseries line}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 29 of file createimage.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCreateImage_a51bb6307d7b106aab55292813ef8b694}\label{classCreateImage_a51bb6307d7b106aab55292813ef8b694}} 
+\index{Create\+Image@{Create\+Image}!create2\+D\+Tex\+Array@{create2\+D\+Tex\+Array}}
+\index{create2\+D\+Tex\+Array@{create2\+D\+Tex\+Array}!Create\+Image@{Create\+Image}}
+\subsubsection{\texorpdfstring{create2\+D\+Tex\+Array()}{create2DTexArray()}}
+{\footnotesize\ttfamily void Create\+Image\+::create2\+D\+Tex\+Array (\begin{DoxyParamCaption}\item[{G\+Luint \&}]{texture\+ID,  }\item[{string}]{filenames\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+create2\+D\+Tex\+Array Create a texture array, you can adjust this to make up to a maximum picture array size of 256. 
+
+Loads a texture array that can be up to 256 pictures in size. The pictures should be of the same type. and the same dimensions (pixel width and pixel height). They are loaded one after another into the buffer which is then loaded into the shader. The system accounts for each picture by knowing the size of a picture in the array.
+
+The variable size below is determined by the background crate image which is of the same size and type as the pictures used in the array.
+
+! Six images, one texture ID.
+
+width = \hyperlink{classCreateImage_ac0edbffce968346bd4c43564beb27c26}{get\+Width()}; height = \hyperlink{classCreateImage_abeb628a5f2fc67aeb1c39c1d0a445142}{get\+Height()}; 
+
+Definition at line 159 of file createimage.\+cpp.
+
+\mbox{\Hypertarget{classCreateImage_acbff5ee9dfb7e64bcf850cce6f3ee13d}\label{classCreateImage_acbff5ee9dfb7e64bcf850cce6f3ee13d}} 
+\index{Create\+Image@{Create\+Image}!create\+Sky\+Box\+Tex@{create\+Sky\+Box\+Tex}}
+\index{create\+Sky\+Box\+Tex@{create\+Sky\+Box\+Tex}!Create\+Image@{Create\+Image}}
+\subsubsection{\texorpdfstring{create\+Sky\+Box\+Tex()}{createSkyBoxTex()}}
+{\footnotesize\ttfamily void Create\+Image\+::create\+Sky\+Box\+Tex (\begin{DoxyParamCaption}\item[{G\+Luint \&}]{texture\+ID,  }\item[{string}]{filenames\mbox{[}6\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+create\+Sky\+Box\+Tex Create a sky box using six pictures for the inside of the box. 
+
+Loads a cubemap texture from 6 individual texture faces Order should be\+: +X (right) -\/X (left) +Y (top) -\/Y (bottom) +Z (front) -\/Z (back)
+
+Six images, one texture ID. 
+
+Definition at line 126 of file createimage.\+cpp.
+
+\mbox{\Hypertarget{classCreateImage_ac0edbffce968346bd4c43564beb27c26}\label{classCreateImage_ac0edbffce968346bd4c43564beb27c26}} 
+\index{Create\+Image@{Create\+Image}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!Create\+Image@{Create\+Image}}
+\subsubsection{\texorpdfstring{get\+Width()}{getWidth()}}
+{\footnotesize\ttfamily G\+Lsizei Create\+Image\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Width Accessor function. 
+
+! Accessor functions to pass along the data. 
+
+Definition at line 89 of file createimage.\+cpp.
+
+\mbox{\Hypertarget{classCreateImage_a0fb8715c56dc5ff120aa355ca66496f6}\label{classCreateImage_a0fb8715c56dc5ff120aa355ca66496f6}} 
+\index{Create\+Image@{Create\+Image}!set\+Image@{set\+Image}}
+\index{set\+Image@{set\+Image}!Create\+Image@{Create\+Image}}
+\subsubsection{\texorpdfstring{set\+Image()}{setImage()}}
+{\footnotesize\ttfamily void Create\+Image\+::set\+Image (\begin{DoxyParamCaption}\item[{string}]{imagefile }\end{DoxyParamCaption})}
+
+
+
+set\+Image Load image and convert it. 
+
+all the image files are required to be in an images directory.
+
+! Delete the item if it exists.
+
+! Free Image Plus Image loads any standard picture.
+
+! Convert image to four 8 bit fields R\+G\+BA.
+
+Load the image into an unsigned char array. 
+
+Definition at line 23 of file createimage.\+cpp.
+
+\mbox{\Hypertarget{classCreateImage_a529a1307050df8719e180e006141b762}\label{classCreateImage_a529a1307050df8719e180e006141b762}} 
+\index{Create\+Image@{Create\+Image}!texture\+Object@{texture\+Object}}
+\index{texture\+Object@{texture\+Object}!Create\+Image@{Create\+Image}}
+\subsubsection{\texorpdfstring{texture\+Object()}{textureObject()}}
+{\footnotesize\ttfamily G\+Luint Create\+Image\+::texture\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+texture\+Object Return an Open\+GL buffer object. 
+
+! Use the \hyperlink{classCreateImage}{Create\+Image} class to turn an image into a texture. Generate texture ID and load texture data
+
+Parameters 
+
+Definition at line 105 of file createimage.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+createimage.\+h\item 
+createimage.\+cpp\end{DoxyCompactItemize}

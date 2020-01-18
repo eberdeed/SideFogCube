@@ -1,0 +1,19 @@
+#############################################################
+#
+# Standard cmake build system framework for sidefogcube.
+#
+#############################################################
+cmake_minimum_required(VERSION 2.6)
+project(sidefogcube)
+add_executable(sidefogcube uniformprinter.cpp shader.cpp createimage.cpp camera.cpp sidefogcube.cpp)
+add_definitions(-g -fPIC -std=c++17)
+include_directories(/usr/include/ClanLib-1.0 /usr/include/GL
+/usr/include/glm /usr/include/boost)
+link_directories(/usr/lib)
+target_link_libraries(sidefogcube stdc++ GL GLEW clanApp clanCore clanDisplay 
+clanGL clanSignals freeimage freeimageplus boost_filesystem boost_system)
+install(TARGETS sidefogcube DESTINATION /usr/bin)
+install(DIRECTORY openglresources DESTINATION /usr/share FILE_PERMISSIONS WORLD_READ)
+install(TARGETS ../README.txt ../CHANGELOG.txt DESTINATION /usr/share/doc/sidefogcube-doc)
+install(DIRECTORY html DESTINATION /usr/share/doc/sidefogcube-doc FILE_PERMISSIONS WORLD_READ)
+install(DIRECTORY latex DESTINATION /usr/share/doc/sidefogcube-doc FILE_PERMISSIONS WORLD_READ)

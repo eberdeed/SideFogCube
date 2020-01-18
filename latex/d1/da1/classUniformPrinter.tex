@@ -1,0 +1,49 @@
+\hypertarget{classUniformPrinter}{}\section{Uniform\+Printer Class Reference}
+\label{classUniformPrinter}\index{Uniform\+Printer@{Uniform\+Printer}}
+
+
+{\ttfamily \#include $<$uniformprinter.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUniformPrinter_aae4f47e6ef97af7ee35be6df54e59ab4}\label{classUniformPrinter_aae4f47e6ef97af7ee35be6df54e59ab4}} 
+\hyperlink{classUniformPrinter_aae4f47e6ef97af7ee35be6df54e59ab4}{Uniform\+Printer} (int prog\+Obj)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classUniformPrinter}{Uniform\+Printer} A constructor that requires the shader program object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUniformPrinter_a54a28c69fee2cd5976b2fe725132f85d}\label{classUniformPrinter_a54a28c69fee2cd5976b2fe725132f85d}} 
+void \hyperlink{classUniformPrinter_a54a28c69fee2cd5976b2fe725132f85d}{print\+Uniforms} ()
+\begin{DoxyCompactList}\small\item\em print\+Uniforms Print the active uniforms. This function is little more than a giant case-\/switch statement to account for the various types of uniforms available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUniformPrinter_a36b9f4d82dd0f6cfc32cc2a3dc12790b}\label{classUniformPrinter_a36b9f4d82dd0f6cfc32cc2a3dc12790b}} 
+int \hyperlink{classUniformPrinter_a36b9f4d82dd0f6cfc32cc2a3dc12790b}{max\+Uniform\+Len}
+\begin{DoxyCompactList}\small\item\em Class global variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUniformPrinter_a88a34ee546f9a05830c3e393b6faedf0}\label{classUniformPrinter_a88a34ee546f9a05830c3e393b6faedf0}} 
+int {\bfseries num\+Uniforms}
+\item 
+\mbox{\Hypertarget{classUniformPrinter_a21b01430e1306d961bc654cd756f155c}\label{classUniformPrinter_a21b01430e1306d961bc654cd756f155c}} 
+int {\bfseries index}
+\item 
+\mbox{\Hypertarget{classUniformPrinter_abc63b1870491ebccbd55684f5aa8e942}\label{classUniformPrinter_abc63b1870491ebccbd55684f5aa8e942}} 
+int {\bfseries prog\+Obj}
+\item 
+\mbox{\Hypertarget{classUniformPrinter_a5a6265447a37c22ebf89dc15beea8818}\label{classUniformPrinter_a5a6265447a37c22ebf89dc15beea8818}} 
+char $\ast$ {\bfseries uniform\+Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class to encapsulate printing out the unforms from a shader program. Gives the location of the uniform and it\textquotesingle{}s status. To use this class simply instantiate it with the shader program object. 
+
+Definition at line 22 of file uniformprinter.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+uniformprinter.\+h\item 
+uniformprinter.\+cpp\end{DoxyCompactItemize}
