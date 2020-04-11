@@ -108,7 +108,7 @@ int SideFogCube::main(int argc, char **argv)
         glState->set_active();
         //! Removing the true on this function will
         //! stop the program from using fullscreen.
-        window = new CL_OpenGLWindow(string("ClanLib Learn OpenGL Example"), SCR_WIDTH, SCR_HEIGHT, true);
+        window = new CL_OpenGLWindow(string("ClanLib Learn OpenGL Example"), SCR_WIDTH, SCR_HEIGHT, false);
         if (window == NULL)
         {
             std::cout << "Failed to create ClanLib window" << std::endl;
@@ -219,8 +219,7 @@ int SideFogCube::main(int argc, char **argv)
     dataIndex = glGetUniformBlockIndex(shader->Program, "itemData");   
     glUniformBlockBinding(shader->Program, dataIndex, 0);
     glBindBuffer(GL_UNIFORM_BUFFER, VBO[3]);
-    glBufferData(GL_UNIFORM_BUFFER, sizeof(itemData), (void*)&itemData,
-    GL_DYNAMIC_DRAW);
+    glBufferData(GL_UNIFORM_BUFFER, sizeof(itemData), (void*)&itemData, GL_DYNAMIC_DRAW);
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
     glBindVertexArray(0);
     glBindBufferBase(GL_UNIFORM_BUFFER, 0, dataIndex);
@@ -310,15 +309,13 @@ int SideFogCube::main(int argc, char **argv)
         {
             shader->setInt("repetition", x);
             int beginvert = 0;
-            int endvert = 6;
             int sides = 6;
             //! Call for each image one side at a time.
             for (int side = 0; side < 6; side++)
             {
                 shader->setInt("side", side);
-                glDrawArraysInstanced(GL_TRIANGLES, beginvert, endvert, NUM_INSTANCES);
+                glDrawArraysInstanced(GL_TRIANGLES, beginvert, sides, NUM_INSTANCES);
                 beginvert += sides;
-                endvert += sides;
             
             }
         }
